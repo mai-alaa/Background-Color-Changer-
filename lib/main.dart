@@ -8,12 +8,10 @@ void main() {
 
 class TestApp extends StatelessWidget {
   const TestApp({super.key});
-
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-     debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: false,
       home: const ColorChangerScreen(),
     );
   }
@@ -41,24 +39,22 @@ class _ColorChangerScreenState extends State<ColorChangerScreen> {
             random.nextInt(256),
           );
         });
-        
       },
       child: Scaffold(
         backgroundColor: backgroundColor,
-        body:  Center(
+        body: Center(
           child: Text(
             'Hey there',
             style: TextStyle(
               fontSize: 30,
-              color: backgroundColor.computeLuminance() > 0.5
-                  ? Colors.black
-                  : Colors.white,
+              color:
+                  backgroundColor.computeLuminance() > 0.5
+                      ? Colors.black
+                      : Colors.white,
             ),
           ),
         ),
-        
       ),
-    )
-    ;
+    );
   }
 }
