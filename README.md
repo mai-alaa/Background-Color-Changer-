@@ -1,16 +1,41 @@
-# test_app
+# Test App
 
-A new Flutter project.
+A simple Flutter application built for testing and experimenting with Flutter features.  
+The app demonstrates basic widget structure, navigation, and state handling.
+
+## Features
+
+- **TestApp widget** as the root of the application.
+- **ColorChangerScreen** that allows changing colors dynamically.
+- Follows **Flutter best practices** with linting enabled.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+### Prerequisites
+- [Flutter SDK](https://flutter.dev/docs/get-started/install) (latest stable version recommended)
+- A connected device or emulator
 
-A few resources to get you started if this is your first Flutter project:
+### Installation
+Clone the repository:
+```bash
+git clone https://github.com/your-username/test_app.git
+cd test_app
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Install dependencies:
+```bash
+flutter pub get
+```
+### Running the App
+```bash
+flutter run
+```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Project Structure
+- `lib/main.dart`: Main entry point of the application.
+- `lib/color_changer_screen.dart`: Contains the ColorChangerScreen widget.
+
+
+## Development
+- **Linting**: Enforced using `flutter analyze` and `flutter format`.
+
+
