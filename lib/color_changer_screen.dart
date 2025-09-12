@@ -14,21 +14,23 @@ class ColorChangerScreen extends StatefulWidget {
 class _ColorChangerScreenState extends State<ColorChangerScreen> {
   static const double textSize = 30;
   static const int maxColorValue = 256;
-  static const int alphaValue = 255;
+  static const int maxAlphaValue = 101;
+  static const double alphaDivisor = 100.0;
   static const double breakPointluminance = 0.5;
   final Random random = Random();
   Color backgroundColor = Colors.white;
+
   
 
   // This method changes the background color to a random color when the screen
   // is tapped.
   void changeBackgroundColor() {
     setState(() {
-      backgroundColor = Color.fromARGB(
-        alphaValue,
+      backgroundColor = Color.fromRGBO(
         random.nextInt(maxColorValue),
         random.nextInt(maxColorValue),
         random.nextInt(maxColorValue),
+        random.nextInt(maxAlphaValue)/alphaDivisor,
       );
     });
   }
